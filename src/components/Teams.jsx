@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {teams} from '../data/data'
+import ReturnButton from './ReturnButton';
 
 export default function Teams() {
     //diachiaro team e setTeam e con useState punto all'array
@@ -32,6 +33,7 @@ export default function Teams() {
                 </div>
                 )
             })}
+            <ReturnButton/>
       </>
     )
 };

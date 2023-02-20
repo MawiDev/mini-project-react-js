@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ReturnButton from "./ReturnButton"
 
 export default function Counter () {
     //Qui dichiaro un array con all'interno una variabile counter e una setCounter.
@@ -9,6 +10,9 @@ export default function Counter () {
         //quando viene eseguita la funzione chiamo il setCounter e prendo il valore di counter e gli aggiungo 1.
         setCounter(counter + 1)
     }
+    const decrementCounter = () => {
+        setCounter(counter - 1)
+    }
     return(
         <>
         <h1>Counter</h1>
@@ -17,8 +21,10 @@ export default function Counter () {
                 e dopodiche creo un bottone che cliccato chiamera la funzione incremet
                 e il counter incrementerà di 1*/}
             <h4>{counter}</h4>
+            <button onClick={() => decrementCounter()}>decrement</button>
             <button onClick={() => incrementCounter()}>increment</button>
         </div>
+        <ReturnButton/>
         </>
     )
 }

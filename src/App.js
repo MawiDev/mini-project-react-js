@@ -1,9 +1,11 @@
 import './App.css';
 import Teams from './components/Teams';
 import Counter from './components/Counter';
+import BgChange from './components/BgChange';
 import Home from './pages/home';
-import Navbar from './layout/Navbar';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
+import Calculator from './components/Calculator';
+import DigitalClock from './components/DigitalClock';
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/teams' element={<Teams/>}/>
           <Route path='/counter' element={<Counter/>}/>
+          <Route path='/bgchange' element={<BgChange/>}/>
+          <Route path='/calculator' element={<Calculator/>}/>
+          <Route path='/digitalclock' element={<DigitalClock/>}/>
         </Routes>
-        <Navbar/>
       </header>
     </div>
   );
