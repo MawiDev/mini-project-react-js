@@ -16,6 +16,10 @@ const Home = () => {
         {
             name:'Digital Clock',
             toref:'/digitalclock'
+        },
+        {
+            name:'Meeting App',
+            toref:'/meeting'
         }
     ]
     return(
