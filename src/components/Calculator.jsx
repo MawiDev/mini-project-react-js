@@ -1,4 +1,3 @@
-import { useState } from "react"
 import ReturnButton from "./ReturnButton"
 
 export default function Calculator () {
