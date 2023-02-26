@@ -1,30 +1,53 @@
-import { useState } from "react"
-import ReturnButton from "./ReturnButton"
+import { useState } from "react";
+import ReturnButton from "./ReturnButton";
 
-export default function Counter () {
-    //Qui dichiaro un array con all'interno una variabile counter e una setCounter.
-    //e imposto lo stato di counter a 0
-    const [counter, setCounter] = useState(0)
-    //dichiaro una funzione che incrementa in counter.
-    const incrementCounter = () => {
-        //quando viene eseguita la funzione chiamo il setCounter e prendo il valore di counter e gli aggiungo 1.
-        setCounter(counter + 1)
-    }
-    const decrementCounter = () => {
-        setCounter(counter - 1)
-    }
-    return(
-        <>
-        <h1>Counter</h1>
-        <div>
-            {/* Qui nella view mostro il counter che partirà con il valore 0
-                e dopodiche creo un bottone che cliccato chiamera la funzione incremet
-                e il counter incrementerà di 1*/}
-            <h4>{counter}</h4>
-            <button onClick={() => decrementCounter()}>decrement</button>
-            <button onClick={() => incrementCounter()}>increment</button>
+export default function Counter() {
+  const [counter, setCounter] = useState(0);
+
+  const handleClick = (amount) => {
+    setCounter((prevCounter) => prevCounter + amount);
+  };
+
+  return (
+    <>
+      <div className="bg-neutral-800 w-full h-screen overflow-hidden flex flex-col justify-center items-center">
+        <h1
+          style={{ color: "#bd00ff" }}
+          className="text-5xl asher-punk font-extrabold uppercase text-white"
+        >
+          Counter
+        </h1>
+        <div className="flex justify-between my-12">
+          <button
+            style={{
+              backgroundColor: "#F8F005",
+              padding: "10px",
+              borderRadius: "10px",
+              margin: "10px",
+              fontSize: '36px',
+              width: '50px'
+            }}
+            onClick={() => handleClick(-1)}
+          >
+            -
+          </button>
+          <h4 className="text-4xl text-white m-6 p-6 text-center">{counter}</h4>
+          <button
+            style={{
+              backgroundColor: "#F8F005",
+              padding: "10px",
+              borderRadius: "10px",
+              margin: "10px",
+              fontSize: '36px',
+              width: '50px'
+            }}
+            onClick={() => handleClick(1)}
+          >
+            +
+          </button>
         </div>
-        <ReturnButton/>
-        </>
-    )
+        <ReturnButton />
+      </div>
+    </>
+  );
 }

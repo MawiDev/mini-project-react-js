@@ -1,6 +1,6 @@
+import { useState } from "react";
 import ReturnButton from "./ReturnButton";
 import { clients } from "../data/data";
-import { useState } from "react";
 
 export default function Meeting() {
   const [client, setClient] = useState(clients);
@@ -15,25 +15,26 @@ export default function Meeting() {
 
   const reloadAll = () => {
     setClient(clients);
-  }
+  };
+
+  const buttonStyle = {
+    backgroundColor: "#F8F005",
+    padding: "10px",
+    borderRadius: "10px",
+    margin: "10px",
+    fontWeight: "bold",
+  };
 
   return (
-    <>
-      <h1>Meeting</h1>
+    <div className="bg-neutral-800 w-full h-screen justify-center items-center overflow-y-auto p-6 py-0">
+      <h1 className="text-5xl asher-punk font-extrabold text-center uppercase text-white my-6"
+      style={{ color: "#bd00ff" }}>
+        Meeting
+      </h1>
       {client.map((el) => (
         <div
           key={el.id}
-          style={{
-            backgroundColor: "white",
-            color: "black",
-            border: "2px solid black",
-            borderRadius: "25px",
-            padding: "10px",
-            margin: "10px",
-            width: "80%",
-            display: "flex",
-            alignItems: "center",
-          }}
+          className="bg-white text-black rounded-md p-2 m-2 flex justify-center"
         >
           <img
             style={{
@@ -44,9 +45,9 @@ export default function Meeting() {
             src={el.img}
             alt={el.name}
           />
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <h4 style={{ textAlign: "center" }}>{el.name}</h4>
-            <p style={{ textAlign: "center", fontSize: "14px" }}>{el.desc}</p>
+          <div className="flex flex-col justify-center">
+            <h4>{el.name}</h4>
+            <p>{el.desc}</p>
           </div>
           <button
             style={{
@@ -63,13 +64,18 @@ export default function Meeting() {
           </button>
         </div>
       ))}
-      <div style={{ display: "flex" }}>
-        <button style={{ marginRight: "10px" }} onClick={removeAll}>
+      <div className="flex justify-center items-center">
+        <button style={buttonStyle} onClick={removeAll}>
           Delete All
         </button>
-        <button onClick={reloadAll}>Reload All</button>
+        <button style={buttonStyle} onClick={reloadAll}>
+          Reload All
+        </button>
       </div>
-      <ReturnButton />
-    </>
+      <div className="text-center">
+        <ReturnButton />
+      </div>
+    </div>
   );
 }
+

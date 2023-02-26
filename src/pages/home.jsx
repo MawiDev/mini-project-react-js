@@ -26,16 +26,6 @@ const Home = () => {
             )
         },
         {
-            name:'Calculator',
-            toref:'/calculator',
-            svg:(
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
-                </svg>
-
-            )
-        },
-        {
             name:'Digital Clock',
             toref:'/digitalclock',
             svg: (
@@ -59,32 +49,25 @@ const Home = () => {
     return(
         <>
             <div className="bg-neutral-800 w-full h-screen overflow-hidden">
-                <div className="flex justify-center my-6">
-                    <div style={
+                <div style={
                         {
                             border: 'solid 2px #001eff',
+                            borderRadius:'25px',
                             color: '#bd00ff'
                         }
-                    }> 
-                    <h1 className="rounded-lg p-6 text-6xl asher-punk font-light uppercase"
-                    >
-                        Example Reactjs
-                    </h1>
-                    <h4 style={{color:'#0abdc6'}} 
-                    className="rounded-lg p-6 text-4xl asher-punk text-center font-extrabold uppercase"
-                    >
-                        サイバーパンクス
-                    </h4>
-                    </div>    
+                    } className="flex justify-center items-center m-6">
+                    <h1 className="rounded-lg p-6 text-4xl asher-punk font-light uppercase text-center tracking-widest">
+                        20 React projects
+                    </h1>   
                 </div>
-                <div style={{backgroundColor:'#F8F005'}}>
-                    <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center">
+                <div>
+                    <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center px-24">
                     {linkApp.map((el) =>{
                         return(
-                            <div key={el}>
+                            <div style={{backgroundColor:'#F8F005'}} className='rounded-lg w-[200px] m-1' key={el}>
                                 <Link to={el.toref}
-                                className='button-49 flex gap-2 items-center justify-center 
-                                text-neutral-900 text-lg font-medium'
+                                className='button-49 flex gap-2 items-center justify-center p-6 
+                                text-neutral-900 text-lg font-semibold'
                                 >
                                     {el.svg}
                                     {el.name}

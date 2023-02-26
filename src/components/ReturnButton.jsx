@@ -5,7 +5,7 @@ export default function ReturnButton() {
         <>
         <div style={
             {
-                padding:'10px',
+                padding:'20px',
                 margin:'20px',
                 backgroundColor:'white',
                 borderRadius:'25px',
