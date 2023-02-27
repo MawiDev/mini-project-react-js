@@ -9,6 +9,8 @@ export default function ReturnButton() {
                 margin:'20px',
                 backgroundColor:'white',
                 borderRadius:'25px',
+                width:'300px',
+                textAlign:'center'
             }
         }>
             <Link style={
@@ -16,7 +18,7 @@ export default function ReturnButton() {
                     color:'black',
                     textDecoration:'none',
                     fontWeight: 'bold',
-                    fontSize:'18px'
+                    fontSize:'18px',
                 }
             } to={'/'}>Return Back</Link>
         </div>

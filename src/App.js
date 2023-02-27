@@ -5,6 +5,7 @@ import Home from './pages/home';
 import { Route, Routes } from 'react-router-dom';
 import DigitalClock from './components/DigitalClock';
 import Meeting from './components/Meeting';
+import Viewport from './components/Viewport';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/bgchange' element={<BgChange/>}/>
           <Route path='/digitalclock' element={<DigitalClock/>}/>
           <Route path='/meeting' element={<Meeting/>}/>
+          <Route path='/viewport' element={<Viewport/>}/>
         </Routes>
       </header>
     </div>
