@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReturnButton from "./ReturnButton";
 import { clients } from "../data/data";
 
-export default function Meeting() {
+export default function GitHubUsers() {
   const [client, setClient] = useState(clients);
 
   const removeItem = (id) => {

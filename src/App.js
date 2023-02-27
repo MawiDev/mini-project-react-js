@@ -4,23 +4,23 @@ import BgChange from './components/BgChange';
 import Home from './pages/home';
 import { Route, Routes } from 'react-router-dom';
 import DigitalClock from './components/DigitalClock';
-import Meeting from './components/Meeting';
+import GitHubUsers from './components/GitHubUsers';
 import Viewport from './components/Viewport';
+import TodoList from './components/TodoList'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/counter' element={<Counter/>}/>
           <Route path='/bgchange' element={<BgChange/>}/>
           <Route path='/digitalclock' element={<DigitalClock/>}/>
-          <Route path='/meeting' element={<Meeting/>}/>
+          <Route path='/githubusers' element={<GitHubUsers/>}/>
           <Route path='/viewport' element={<Viewport/>}/>
+          <Route path='/todolist' element={<TodoList/>}/>
         </Routes>
-      </header>
-    </div>
+    </>
   );
 }
 
