@@ -25,11 +25,11 @@ export default function GitHubUsers() {
       <div className="flex flex-wrap justify-center">
         {users.map((el) =>{
           return(
-            <div key={el.id} className='bg-white m-6 flex flex-row justify-start items-center gap-12 w-[20%] p-4 rounded-lg'>
-              <img width={'100'} className='rounded-full' src={el.avatar_url} alt={el.login} />
+            <div key={el.id} className='bg-white m-2 flex justify-start items-center md:w-[30%] gap-4 p-2 rounded-lg'>
+              <img width={'50'} className='rounded-full' src={el.avatar_url} alt={el.login} />
               <div>
-                <h2 className="text-2xl font-medium">{el.login}</h2>
-                <a href={el.html_url} className='underline text-blue-600'>Profile</a>
+                <h2 className="text-xl font-medium">{el.login}</h2>
+                <a href={el.html_url} className='underline text-blue-600 text-sm'>Profile</a>
               </div>
             </div>
           )
