@@ -16,7 +16,7 @@ const Home = () => {
                     </h1>   
                 </div>
                 <div>
-                    <div className="flex flex-col md:flex-col lg:flex-row justify-between items-center px-24">
+                    <div className="flex flex-wrap justify-center items-center gap-8">
                     {linkApp.map((el) =>{
                         return(
                             <div style={{backgroundColor:'#F8F005'}} className='rounded-lg w-[200px] m-1' key={el}>
